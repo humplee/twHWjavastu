@@ -6,14 +6,14 @@ import java.util.Map;
 public class Student {
     private String name;
     private String studentNumber;
-    private Map<String,Integer>scoreList;
+    Map<String,Integer>scoreList;
     Student(String name,String studentNumber){
         this.name=name;
         this.studentNumber=studentNumber;
         scoreList=new HashMap<>();
         //TODO input verification
     }
-    private void addScore(String subject,int score){
+    void addScore(String subject,int score){
         scoreList.put(subject,score);
     }
     private void changeName(String newName){
@@ -25,6 +25,10 @@ public class Student {
     }
     private void changeStudentNumber(){
         //TODO finish changeStudentNumber
+    }
+
+    String getName(){
+        return name;
     }
 
 
